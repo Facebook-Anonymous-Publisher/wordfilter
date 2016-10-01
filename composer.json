@@ -1,0 +1,25 @@
+{
+  "name": "bepsvpt/wordfilter",
+  "description": "High performance wordfilter.",
+  "keywords": ["wordfilter"],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "BePsvPT",
+      "email": "freedom@csie.io"
+    }
+  ],
+  "require": {
+    "overtrue/pinyin": "^3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.5",
+    "codeclimate/php-test-reporter": "^0.3.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bepsvpt\\Wordfilter\\": "src/"
+    }
+  }
+}
