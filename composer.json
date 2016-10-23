@@ -1,12 +1,12 @@
 {
-  "name": "bepsvpt/wordfilter",
+  "name": "facebook-anonymous-publisher/wordfilter",
   "description": "High performance wordfilter.",
   "keywords": ["wordfilter"],
   "type": "library",
   "license": "MIT",
   "authors": [
     {
-      "name": "BePsvPT",
+      "name": "Facebook-Anonymous-Publisher",
       "email": "freedom@csie.io"
     }
   ],
@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Bepsvpt\\Wordfilter\\": "src/"
+      "FacebookAnonymousPublisher\\Wordfilter\\": "src/"
     }
   }
 }
