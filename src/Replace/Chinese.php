@@ -51,17 +51,19 @@ class Chinese implements Replace
 
         $blocks = array_unique($length);
 
+        $min = end($blocks);
+
         $chars = $self->splitText($text);
 
         $index = $self->index($chars);
 
         $pinyins = $self->pinyin->convert($text);
 
-        $len = count($pinyins) - end($blocks) + 1;
+        $len = count($pinyins) - $min + 1;
 
         for ($i = 0; $i < $len; ++$i) {
             foreach ($blocks as $block) {
-                if ($i + $block > $len + 1) {
+                if ($i + $block >= $len + $min) {
                     continue;
                 }
 
@@ -96,7 +98,9 @@ class Chinese implements Replace
         foreach ($words as $word) {
             $pinyin = $this->pinyin->sentence($word);
 
-            $length[md5($pinyin)] = mb_strlen($word);
+            $length[md5($pinyin)] = ($pinyin === $word)
+                ? 1
+                : mb_strlen($word);
         }
 
         arsort($length);
@@ -158,8 +162,7 @@ class Chinese implements Replace
         $index = [];
 
         foreach ($chars as $key => $char) {
-            // Ignore non Chinese, non English and non Number words.
-            if (preg_match('/^[\p{Han}a-zA-Z\d]+$/u', $char)) {
+            if (preg_match('/[\p{Han}\w]+/u', $char)) {
                 $index[] = $key;
             }
         }
