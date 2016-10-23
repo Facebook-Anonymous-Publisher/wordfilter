@@ -2,9 +2,6 @@
 
 namespace FacebookAnonymousPublisher\Wordfilter;
 
-use FacebookAnonymousPublisher\Wordfilter\Match;
-use FacebookAnonymousPublisher\Wordfilter\Replace;
-
 class Wordfilter
 {
     /**
@@ -68,7 +65,6 @@ class Wordfilter
     {
         return Replace\Normal::replace($words, $replace, $text);
     }
-
 
     /**
      * Determines the given text contain chinese words.
