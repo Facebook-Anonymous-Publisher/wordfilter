@@ -15,7 +15,7 @@ class Normal implements Match
     public static function match($text, array $words)
     {
         foreach ($words as $word) {
-            if (false !== mb_strpos($text, $word)) {
+            if (false !== strpos($text, $word)) {
                 return true;
             }
         }

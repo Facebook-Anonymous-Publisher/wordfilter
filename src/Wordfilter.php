@@ -5,7 +5,7 @@ namespace FacebookAnonymousPublisher\Wordfilter;
 class Wordfilter
 {
     /**
-     * Returns whether text contain words or not.
+     * Determines the given text contain any of words.
      *
      * @param string $text
      * @param array $words
@@ -22,7 +22,7 @@ class Wordfilter
     }
 
     /**
-     * Returns whether text contain words or not.
+     * Determines the given text contain any of words.
      *
      * @param string $text
      * @param array $words
