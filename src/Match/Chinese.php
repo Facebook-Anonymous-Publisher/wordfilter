@@ -43,7 +43,7 @@ class Chinese implements Match
         $text = implode(' ', $self->pinyin->convert($text));
 
         foreach ($self->transformWords($words) as $word) {
-            if (false !== strpos($text, $word)) {
+            if (false !== mb_strpos($text, $word)) {
                 return true;
             }
         }
