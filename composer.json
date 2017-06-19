@@ -23,5 +23,10 @@
     "psr-4": {
       "FacebookAnonymousPublisher\\Wordfilter\\": "src/"
     }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
   }
 }
