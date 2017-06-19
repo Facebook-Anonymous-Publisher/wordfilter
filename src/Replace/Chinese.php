@@ -35,7 +35,7 @@ class Chinese implements Replace
     }
 
     /**
-     * Replace the text with replacement according to the given words.
+     * Replace words with replacements in a text.
      *
      * @param array $words
      * @param string $replacement
@@ -85,7 +85,7 @@ class Chinese implements Replace
     }
 
     /**
-     * Get the words length using md5 as key.
+     * Get echo word length and use md5 as key.
      *
      * @param array $words
      *
